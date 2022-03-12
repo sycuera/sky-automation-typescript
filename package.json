@@ -1,0 +1,41 @@
+{
+  "name": "sky-automation",
+  "version": "0.0.0",
+  "description": "Testcafe automated tests for Sky",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "chrome": "testcafe \"chrome --kiosk\" ./sky_tests/*.test.ts",
+    "firefox": "testcafe \"firefox --kiosk\" ./sky_tests/*.test.ts",
+    "chrome:headless": "testcafe \"chrome:headless --kiosk\" ./sky_tests/*.test.ts",
+    "firefox:headless": "testcafe \"firefox:headless --kiosk\" ./sky_tests/*.test.ts"
+  },
+  "keywords": [
+    "Testing",
+    "Automation",
+    "TestCafe"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-testcafe-extended": "^0.2.0",
+    "mocha": "^8.2.1",
+    "node-fetch": "^2.6.1",
+    "prettier": "2.2.1",
+    "slack-node": "^0.1.8",
+    "testcafe": "^1.9.4",
+    "testcafe-reporter-slack-custom": "^1.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "yar": "^9.1.0",
+    "yarn": "^1.22.17"
+  }
+}

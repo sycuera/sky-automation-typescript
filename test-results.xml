@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 99.0.4844.51 / macOS 10.15.7" tests="4" failures="1" skipped="0" errors="1" time="100.717" timestamp="Sat, 12 Mar 2022 11:26:18 GMT" >
+  <testcase classname="Shop page is navigable and usable" file="/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts" name="User navigates to shop page" time="49.995">
+  </testcase>
+  <testcase classname="Shop page is navigable and usable" file="/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts" name="User sees tiles on the shop page" time="24.385">
+  </testcase>
+  <testcase classname="Shop page is navigable and usable" file="/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts" name="User sees a list of deals on the deals page" time="11.276">
+    <failure>
+    <![CDATA[
+      1) AssertionError: Not able to see list of deals with prices: expected false to deeply equal true
+
+         + expected - actual
+
+         -false
+         +true
+
+
+         Browser: Chrome 99.0.4844.51 / macOS 10.15.7
+
+            37 |
+            38 |test('User sees a list of deals on the deals page', async (t) => {
+            39 |  await basePage.openUrl(url.dealsUrl);
+            40 |  await t
+            41 |    .expect(await homePage.validateDealsAndPricesAreVisible(5))
+          > 42 |    .eql(true, 'Not able to see list of deals with prices');
+            43 |});
+            44 |
+            45 |fixture(
+            46 |  'search show the results that are determined by editorial, as well as generic searches'
+            47 |).beforeEach(async (t) => {
+
+            at <anonymous> (/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts:42:6)
+            at fulfilled (/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts:5:58)
+    ]]>
+    </failure>
+  </testcase>
+  <testcase classname="search show the results that are determined by editorial, as well as generic searches" file="/Users/Sivakumar.Rajendran/Documents/Learnings/JavaScript/sky-automation-sivakumar/sky_tests/SkyWebsite.test.ts" name="search show the results that are determined by editorial" time="14.96">
+  </testcase>
+</testsuite>
