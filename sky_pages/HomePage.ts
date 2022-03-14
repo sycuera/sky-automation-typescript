@@ -37,13 +37,11 @@ class HomePage extends BasePage {
   }
   async isPriceVisible(i) {
     const price = await Selector('//span[contains(@id,"price.offer")]').nth(i);
-    return price;
+    return this.isVisible(price);
   }
   async isDealVisible(i) {
-    const deal = await Selector(
-      '//div[contains(@data-content-id,"offer")]'
-    ).nth(i);
-    return this.isVisible(this.deal);
+    const deal = await Selector('//div[contains(@data-content-id,"offer")]').nth(i);
+    return this.isVisible(deal);
   }
 
   async validateDealsAndPricesAreVisible(numOfDeals) {
